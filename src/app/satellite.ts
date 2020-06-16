@@ -1,3 +1,5 @@
+//import { truncate } from 'fs';
+
 export class Satellite {
     name: string;
     orbitType: string;
@@ -12,4 +14,16 @@ export class Satellite {
         this.orbitType=orbitType;
         this.operational=operational;
     }
+
+    shouldShowWarning(){
+        //console.log("inside ssw, type=",this.type);
+        if (this.type==='Space Debris'){
+            return true;
+        }
+        return false;
+
+    }
+    
+
+
 }
